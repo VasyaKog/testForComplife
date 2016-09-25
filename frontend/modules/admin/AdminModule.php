@@ -1,0 +1,31 @@
+<?php
+
+namespace frontend\modules\admin;
+
+use common\components\AccessRule;
+use yii\filters\AccessControl;
+use yii\web\Controller;
+use common\models\User;
+
+/**
+ * admin module definition class
+ */
+class AdminModule extends \yii\base\Module
+{
+    /**
+     * @inheritdoc
+     */
+    public $controllerNamespace = 'frontend\modules\admin\controllers';
+
+    /**
+     * @inheritdoc
+     */
+    
+
+    public function init()
+    {
+        parent::init();
+
+        // custom initialization code goes here
+    }
+}
