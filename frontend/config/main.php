@@ -48,8 +48,17 @@ return [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',
-                    'controller' => ['api/v1/user' => '/apiv1/user'],
-                    'only' => ['index'],
+                    'controller' => [
+                            'api/v1/user' => '/apiv1/user',
+                    ],
+                    'extraPatterns' => [
+                        'GET status' => 'status',
+                        'DELETE delete/{id}'=>'delete',
+                        'GET /{id}' =>'view',
+                        'PUT {id}/changestatus'=>'changestatus',
+                        'PATCH {id}/changerole'=>'changerole',
+                    ]
+
                 ],
                 '/' => 'site/index',
                 'about' => 'site/about',
